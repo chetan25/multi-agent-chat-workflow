@@ -43,11 +43,11 @@ services:
       retries: 3
       start_period: 40s
 
-  chat-fe:
+  chat-ui:
     build:
-      context: ./chat-fe
+      context: ./chat-ui
       dockerfile: Dockerfile
-    container_name: chat_fe_service
+    container_name: chat_ui_service
     restart: always
     ports:
       - "3000:3000"

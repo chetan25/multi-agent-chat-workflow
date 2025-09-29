@@ -6,10 +6,10 @@ A sophisticated chat application featuring intelligent agent orchestration with 
 
 This application consists of two main components:
 
-- **Frontend (chat-fe)**: Next.js 15 application with TypeScript and Tailwind CSS
+- **Frontend (chat-ui)**: Next.js 15 application with TypeScript and Tailwind CSS
 - **Backend (chat-be)**: FastAPI application with intelligent agent orchestration using LangGraph
 
-## 🎯 Frontend (chat-fe)
+## 🎯 Frontend (chat-ui)
 
 ### User Flow
 
@@ -152,12 +152,12 @@ Specialized workflow for research, analysis, and report writing:
 - **PostgreSQL** (for database)
 - **OpenAI API Key** (for AI functionality)
 
-### Frontend Setup (chat-fe)
+### Frontend Setup (chat-ui)
 
 1. **Navigate to frontend directory:**
 
    ```bash
-   cd chat-fe
+   cd chat-ui
    ```
 
 2. **Install dependencies:**
@@ -249,9 +249,9 @@ Specialized workflow for research, analysis, and report writing:
    docker run -p 8000:8000 chat-be
 
    # Frontend
-   cd chat-fe
-   docker build -t chat-fe .
-   docker run -p 3000:3000 chat-fe
+   cd chat-ui
+   docker build -t chat-ui .
+   docker run -p 3000:3000 chat-ui
    ```
 
 ## 🔧 Configuration
@@ -284,7 +284,7 @@ The application uses PostgreSQL with automatic:
 ### Frontend Testing
 
 ```bash
-cd chat-fe
+cd chat-ui
 npm run test
 ```
 
@@ -297,7 +297,7 @@ python -m pytest
 
 ### API Testing
 
-Use the provided test utilities in `chat-fe/src/app/utils/testApi.ts`:
+Use the provided test utilities in `chat-ui/src/app/utils/testApi.ts`:
 
 ```typescript
 import {
@@ -320,7 +320,7 @@ const asyncResult = await testAsyncReport(threadId);
 
 ```
 full-agent/
-├── chat-fe/                 # Next.js Frontend
+├── chat-ui/                 # Next.js Frontend
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── components/     # React components
